@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/product/product.css" />
+    <title>Product</title>
+    <style>
+      /* The container */
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid grey;
+        background-color: black;
+        border-radius: 5px;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: orange;
+        border: 1px solid orange;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 6px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/cofeshoplogo48.png" alt="logo" />
+      </div>
+      <div class="home">
+        <p style="color: white">Home</p>
+      </div>
+      <div class="product">
+        <p style="color: white">Product</p>
+      </div>
+      <div class="search">
+        <img src="/Search.png" alt="Search" />
+      </div>
+      <div class="cart">
+        <img src="/ShoppingCart (1).png" alt="cart1" />
+      </div>
+      <div class="signin">
+        <p style="color: white">Sign In</p>
+      </div>
+      <div class="signup">
+        <p style="color: black">Sign Up</p>
+      </div>
+    </header>
+    <section class="image-title">
+      <img
+        src="/assets/img/Rectangle 299.png"
+        alt="image"
+        width="100%"
+        height="100%"
+      />
+      <h1>We Provide Good Coffee and Healthy Meals</h1>
+    </section>
+    <section class="promo">
+      <div class="text-title">
+        <h1>Today</h1>
+        <h1 style="color: chocolate; margin-left: 10px">Promo</h1>
+        <img src="/assets/img/Group 1305.png" alt="left" />
+        <img src="/assets/img/Group 1304.png" alt="right" />
+      </div>
+      <div class="promo-coupon">
+        <div class="coupon">
+          <div class="image-coupon">
+            <img src="/assets/img/image 47.png" alt="image-coupon" />
+          </div>
+          <div class="info-coupon">
+            <p>HAPPY MOTHERS DAY!</p>
+            <p>Get one of favorite menu for free</p>
+            <p>Claum Coupon</p>
+          </div>
+        </div>
+        <div class="coupon">
+          <div class="image-coupon">
+            <img src="/assets/img/image 47.png" alt="image-coupon" />
+          </div>
+          <div class="info-coupon">
+            <p>HAPPY MOTHERS DAY!</p>
+            <p>Get one of favorite menu for free</p>
+            <p>Claum Coupon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-title">
+      <h1>Our</h1>
+      <h1 style="color: chocolate; margin-left: 10px">Product</h1>
+    </div>
+    <section class="product-page">
+      <div class="product-filter">
+        <div class="filter">
+          <h3>Filter</h3>
+          <h4 style="cursor: pointer">Reset Filter</h4>
+        </div>
+        <h4>Search</h4>
+        <div class="input">
+          <input
+            type="text"
+            placeholder="   Search Your Product"
+            style="font-size: 24px"
+          />
+        </div>
+        <h4>Category</h4>
+        <label class="container"
+          >Favorite Product
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Coffee
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Non Coffee
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Foods
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <h4>Sort By</h4>
+        <label class="container"
+          >Buy 1 Get 1
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Flash Sale
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Birthday Package
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"
+          >Cheap
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <h4>Range Price</h4>
+        <div class="apply">
+          <p style="color: black">Apply Filter</p>
+        </div>
+      </div>
+      <div class="product-list">
+        <div class="head">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="head2">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="three">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="four">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="five">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="six">
+          <div class="img">
+            <img
+              src="/image 27.png"
+              alt="product_photo"
+              style="height: 400px; width: 380px"
+            />
+          </div>
+          <div class="info">
+            <div class="Title">
+              <h1>Hazelnut latte</h1>
+            </div>
+            <div class="desc">
+              <p>
+                You can explore the menu that we provide with fun and have their
+                own taste and make your day better.
+              </p>
+            </div>
+            <div class="idr">
+              <h3>IDR 20.000</h3>
+            </div>
+            <div class="harga">
+              <div class="price">
+                <p>Buy</p>
+              </div>
+              <div class="cart1">
+                <img src="/ShoppingCart.png" alt="cart" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="contact first">
+        <div class="emblem">
+          <img src="/cofeshoplogo48.png" alt="logo" />
+          <p>Coffee Shop</p>
+        </div>
+        <p>
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <p>©2020CoffeeStore</p>
+      </div>
+      <div class="contact">
+        <h4>Product</h4>
+        <p>Our Product</p>
+        <p>Pricing</p>
+        <p>Locations</p>
+        <p>Countries</p>
+        <p>Blog</p>
+      </div>
+      <div class="contact">
+        <h4>Engage</h4>
+        <p>Partner</p>
+        <p>FAQ</p>
+        <p>About Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+      </div>
+      <div class="contact sosmed">
+        <h4>Social Media</h4>
+        <div class="socmed">
+          <img src="/Facebook.png" alt="Facebook" />
+          <img src="/Twitter.png" alt="Twiter" />
+          <img src="/Instagram.png" alt="Instagaram" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
