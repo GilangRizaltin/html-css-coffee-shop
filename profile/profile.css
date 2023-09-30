@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+/*Header*/
+header {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+.coffee-shop-logo {
+    margin-left: 5%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.coffee-shop-text, 
+.home-text, 
+.product-text, 
+.search-symbol, 
+.cart-symbol, 
+.sign-in, .sign-up {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.sign-in {
+    border: 1px solid white;
+    display: flex;
+    height: 40px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 9px;
+}
+.sign-up {
+    margin-right: 5%;
+    background-color: orange;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 9px;
+}
+.product-text {
+    flex: 1;
+}
+/*Main*/
+main {
+    display: flex;
+    margin-bottom: 60px;
+}
+h1 {
+    margin: 2% 20%;
+}
+.profile {
+    border: 2px solid silver;
+    padding: 1%;
+    margin-left: 20%;
+    width: 186px;
+    height: 300px;
+    border-radius: 7px;
+    text-align: center;
+
+}
+.image {
+    border: 2px solid black;
+    height: 170px;
+    margin: 10px 0px;
+    border-radius: 50%;
+}
+.image img {
+    border-radius: 50%;
+}
+.upload {
+    background-color: orange;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+.identity {
+    border: 2px solid silver;
+    margin-right: 20%;
+    width: 80%;
+    padding: 1%;
+    border-radius: 7px;
+    margin-left: 3%;
+}
+.set-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.set-password a {
+    position: absolute;
+    right: 0%;
+}
+.identity h3, .submit, a {
+    margin-top: 30px;
+}
+input {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+}
+.submit {
+    background-color: orange;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+/*Footer*/
+footer {
+    background-color: #aaaa;
+    padding: 5% 10%;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+footer p {
+    color: rgb(82, 82, 82);
+}
+.contact {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.emblem {
+    display: flex;
+    align-items: center;
+}
+.socmed img:hover {
+    opacity: 0.8;
+}
+footer p {
+    margin-top: 30px;
+}
+.socmed {
+    margin-top: 30px;
+}
+.emblem p {
+    margin: 0;
+}
+
+/*Laptop 1024*/
+@media screen and (max-width :1024px) {
+    
+}
+
+/*Tablet 768*/
+@media screen and (max-width :768px) {
+    .coffee-shop-text {
+        display: none;
+    }
+    h1 {
+        margin: 2% 5%;
+    }
+    .profile {
+        margin-left: 5%;
+    }
+    .identity {
+        margin-right: 5%;
+    }
+    .contact {
+        margin-left: 0.8%;
+        margin-right: 0.8%;
+    }
+}
+
+/*Mobile 425*/
+@media screen and (max-width :425px) {
+    .coffee-shop-text, 
+    .home-text, 
+    .product-text, 
+    .search-symbol, 
+    .cart-symbol, 
+    .sign-in, .sign-up {
+    margin-left: 6px;
+    }
+    .coffee-shop-logo {
+        margin-left: 1%;
+    }
+    .sign-up {
+        margin-right: 1%;
+    }
+    footer {
+        display: block;
+    }
+    .prduct-engage {
+        display: flex;
+    }
+    .contact {
+        margin-bottom: 20px;
+    }
+    footer p {
+        margin-top: 5px;
+    }
+    .socmed {
+        margin-top: 5px;
+    }
+    main {
+        display: block;
+        padding: 2% 10%;
+    }
+    .profile {
+        margin: 0%;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 350px;
+    }
+    .identity {
+        margin: 0%;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+     .image {
+        border: 2px solid black;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+    }
+     .name-photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+}
