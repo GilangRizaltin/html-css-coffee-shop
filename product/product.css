@@ -1,4 +1,3 @@
-/* All */
 * {
     padding: 0;
     margin: 0;
@@ -8,11 +7,11 @@
 body {
     box-sizing: border-box;
     max-width: 100vw;
-    height: 200vh;
 }
-/* Header */
+
+/*Header*/
 header {
-    height: 60px;
+    height: 80px;
     width: 100%;
     background-color: black;
     display: flex;
@@ -21,19 +20,21 @@ header {
     top: 0px;
     z-index: 100;
 }
-
-.logo {
-    margin-left: 70px;
-    margin-right: 30px;
+.coffee-shop-logo {
+    margin-left: 5%;
+    margin-right: 10px;
     cursor: pointer;
 }
-
-.home, .product, .search, .cart, .signin, .signup {
+.coffee-shop-text, 
+.home-text, 
+.product-text, 
+.search-symbol, 
+.cart-symbol, 
+.sign-in, .sign-up {
     margin-left: 20px;
     cursor: pointer;
 }
-
-.signin {
+.sign-in {
     border: 1px solid white;
     display: flex;
     height: 40px;
@@ -43,9 +44,8 @@ header {
     text-align: center;
     border-radius: 9px;
 }
-
-.signup {
-    margin-right: 60px;
+.sign-up {
+    margin-right: 5%;
     background-color: orange;
     height: 40px;
     width: 70px;
@@ -55,8 +55,7 @@ header {
     text-align: center;
     border-radius: 9px;
 }
-
-.product {
+.product-text {
     flex: 1;
 }
 
@@ -66,9 +65,9 @@ header {
     margin-bottom: 30px;
 }
 
-h1 {
+/* h1 {
     font-size: 260%;
-}
+} */
 
 .image-title h1 {
     position: relative;
@@ -88,7 +87,7 @@ h1 {
 .outer {
     /* display: flex;
     margin-bottom: 30px; */
-    overflow: scroll;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -100,9 +99,6 @@ h1 {
     display: flex;
 }
 
-.outer .inner div.coupon {
-
-}
 
 .coupon {
     display: flex;
@@ -124,19 +120,18 @@ h1 {
 
 /* Product Page */
 .product-page {
-    margin: 20px 60px;
     display: flex;
     position: relative;
+    justify-content: center;
 }
 
 .product-filter {
-    width: 30%;
+    width: 20%;
     height: 45%;
     background-color: black;
     border-radius: 24px;
     color: white;
     padding: 20px;
-    font-size: 24px;
 }
 
 .filter {
@@ -165,21 +160,23 @@ h1 {
 }
 
 .apply {
-        margin-right: 60px;
-        background-color: orange;
-        height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-radius: 9px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .product-list {
-    width: 70%;
     position: relative;
     right: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 7% 300px 7% 300px;
     grid-template-rows: 570px 30px 570px 30px 570px;
     justify-items: center;
     grid-template-areas: 
@@ -217,15 +214,12 @@ h1 {
 
 /*dbahbhdfbjkdsavbjkvdsajkvjkndvsjknsavkj*/
 
-.show-product {
-    height: 475px;
-    width: 100%;
-}
+
 
 .info {
-    width: 320px;
-    bottom: 60px;
-    left: 18px;
+    width: 250px;
+    bottom: 70px;
+    left: 15px;
     position: relative;
     background-color: white;
     box-shadow: 2px 2px 5px #aaaaaa;
@@ -233,13 +227,13 @@ h1 {
 }
 
 .Title, .desc, .idr {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
 .harga {
     display: flex;
-    height: 40px;
+    height: 60px;
 }
 
 .price {
@@ -295,4 +289,8 @@ footer p {
 
 .emblem p {
     margin: 0;
+}
+
+.socmed {
+    align-items: start;
 }

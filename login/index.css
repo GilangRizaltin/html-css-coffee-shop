@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+/*picture*/
+.page {
+    display: flex;
+}
+
+.emblem {
+    display: flex;
+    align-items: center;
+}
+
+.picture {
+    width: 420px;
+    height: 100vh;
+}
+/*information*/
+.information {
+    width: 40%;
+    position: relative;
+    left: 5%;
+    top: 100px;
+    padding: 30px;
+    height: 700px;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+.input input {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 15px;
+}
+
+.login{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.have {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.socmed {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.forget {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.facebook, .google {
+    width: 40%;
+    height: 30px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(218, 218, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #aaaaaa;
+}
+
+.login:hover {
+    opacity: 0.8;
+}
+
+/*Laptop 1024*/
+@media screen and (max-width :1439px) {
+    
+}
+@media screen and (max-width :1024px) {
+    .picture {
+        width: 360px;
+        height: 100vh;
+    }
+}
+
+/*Tablet 768*/
+@media screen and (max-width :768px) {
+    .picture {
+        width: 40%;
+        height: 100vh;
+    }
+}
+
+/*Mobile 425*/
+@media screen and (max-width :426px) {
+    .picture {
+        display: none;
+    }
+    .information {
+        width: 85%;
+        position: relative;
+        left: 5%;
+        top: 60px;
+        padding: 10px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+}
