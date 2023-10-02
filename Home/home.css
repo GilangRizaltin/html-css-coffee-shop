@@ -9,6 +9,10 @@ body {
     max-width: 100vw;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 /*Header*/
 header {
     height: 80px;
@@ -58,7 +62,10 @@ header {
 .product-text {
     flex: 1;
 }
-
+.cart-symbol ion-icon, .search-symbol ion-icon {
+    font-size: 32px;
+    color: white;
+}
 /*main*/
 /*page one*/
 .page-one {
@@ -68,26 +75,26 @@ header {
     flex-direction: row-reverse;
     width: 100%;
 }
-.home-interface {
-    width: 50%;
-    padding: 15% 6%;
-}
-.home-interface * {
-    margin-bottom: 20px;
-}
 .home-photo, .home-photo img, .detail-photo, .detail-photo img {
     width: 900px;
     height: 100%;
 }
+.home-interface {
+    width: 50%;
+    padding: 15% 6%;
+}
+/* .home-interface * {
+    margin-bottom: 20px;
+} */
 .get-started {
-        background-color: orange;
-        width: 120px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 5px;
+    background-color: orange;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
 }
 .amount-info {
     display: flex;
@@ -96,7 +103,7 @@ header {
     margin-top: 10px;
     margin-right: 20px;
 }
-.amount-info .center {
+.amount-info .center, .amount-info .right {
     margin-left: 20px;
 }
 /*page two*/
@@ -108,6 +115,19 @@ header {
     width: 100%;
     margin-bottom: 50px;
 }
+.line {
+    height: 50px;
+    width: 10px;
+    background-color: orange;
+    border: none;
+    margin-right: 30px;
+}
+.detail div {
+    display: flex;
+}
+.detail h1, .detail p {
+    margin-bottom: 40px;
+}
 .detail-interface {
     width: 80%;
     margin: 10px 6%;
@@ -118,11 +138,11 @@ header {
 }
 .detail li {
     list-style-type: none;
+    margin-bottom: 30px;
 }
 .detail ion-icon {
-    color: rgb(46, 92, 0);
+    color: rgb(30, 128, 87);
 }
-.detail h1
 /*page three*/
 .favourite {
     display: flex;
@@ -282,6 +302,22 @@ footer p {
 .emblem p {
     margin: 0;
 }
+.socmed {
+    display: flex;
+}
+.socmed div {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px
+}
+.socmed ion-icon {
+    width: 40px;
+}
 /*Laptop 1024*/
 @media screen and (max-width :1439px) {
     .home-photo, .home-photo img, .detail-photo, .detail-photo img {
@@ -306,6 +342,12 @@ footer p {
     .home-photo, .home-photo img, .detail-photo, .detail-photo img {
         width: 350px;
         height: 100%;
+    }
+    .detail-interface {
+        margin-top: 50px;
+    }
+    .detail h1, .detail p, .detail li {
+        margin-bottom: 10px;
     }
 }
 
@@ -344,6 +386,12 @@ footer p {
         margin-left: 0.8%;
         margin-right: 0.8%;
     }
+    .socmed {
+        display: block;
+    }
+    .socmed div {
+        margin-bottom: 20px;
+    }
 }
 
 /*Mobile 425*/
@@ -379,6 +427,7 @@ footer p {
     }
     .socmed {
         margin-top: 5px;
+        display: flex;
     }
     .testimony {
         display: block;
