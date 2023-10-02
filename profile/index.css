@@ -58,6 +58,10 @@ header {
 .product-text {
     flex: 1;
 }
+.cart-symbol ion-icon, .search-symbol ion-icon {
+    font-size: 32px;
+    color: white;
+}
 /*Main*/
 main {
     display: flex;
@@ -66,6 +70,7 @@ main {
 h1 {
     margin: 2% 20%;
 }
+/*Photo Profile*/
 .profile {
     border: 2px solid silver;
     padding: 1%;
@@ -84,6 +89,8 @@ h1 {
 }
 .image img {
     border-radius: 50%;
+    width: 100%; 
+    height: 100%;
 }
 .upload {
     background-color: orange;
@@ -95,6 +102,7 @@ h1 {
     text-align: center;
     border-radius: 5px;
 }
+/*Identity*/
 .identity {
     border: 2px solid silver;
     margin-right: 20%;
@@ -114,15 +122,30 @@ h1 {
 }
 .identity h3, .submit, a {
     margin-top: 30px;
+    margin-bottom: 10px;
 }
-input {
+.input-new {
     width: 100%;
     height: 40px;
     background-color: rgb(224, 224, 224);
-    border: none;
-    outline: none;
     border: 1px solid rgb(190, 190, 190);
-    border-radius: 5px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-new input {
+    width: 90%;
+    height: 80%;
+    margin: 0px 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(224, 224, 224);
+    outline: none;
+}
+.input-new ion-icon {
+    font-size: 1rem;
+    margin: 0px 10px;
 }
 .submit {
     background-color: orange;
@@ -132,6 +155,9 @@ input {
     align-items: center;
     text-align: center;
     border-radius: 5px;
+}
+a {
+    text-decoration: none;
 }
 /*Footer*/
 footer {
@@ -163,7 +189,22 @@ footer p {
 .emblem p {
     margin: 0;
 }
-
+.socmed {
+    display: flex;
+}
+.socmed div {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px
+}
+.socmed ion-icon {
+    width: 40px;
+}
 /*Laptop 1024*/
 @media screen and (max-width :1024px) {
     
@@ -186,6 +227,12 @@ footer p {
     .contact {
         margin-left: 0.8%;
         margin-right: 0.8%;
+    }
+    .socmed {
+        display: block;
+    }
+    .socmed div {
+        margin-bottom: 20px;
     }
 }
 
@@ -216,6 +263,7 @@ footer p {
     }
     .socmed {
         margin-top: 5px;
+        display: flex;
     }
     main {
         display: block;

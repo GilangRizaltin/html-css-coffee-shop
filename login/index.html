@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login landing page" />
     <link rel="stylesheet" href="/login/index.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Login</title>
   </head>
   <body>
     <div class="page">
       <div class="picture">
         <img
-          src="/assets/img/Rectangle 289 (1).png"
+          src="/assets/webp/Rectangle 289 (1).webp"
           alt="image"
           style="height: 100%; width: 100%"
         />
@@ -26,17 +35,18 @@
         <h3 style="color: chocolate">Login</h3>
         <p>Fill out the form correctly</p>
         <h3>Email</h3>
-        <div class="input">
-          <input type="text" placeholder="   Enter Your Fullname" />
+        <div class="input-new">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" placeholder="Enter your Email" />
         </div>
         <h3>Password</h3>
-        <div class="input">
-          <input type="text" placeholder="   Enter Your Email" />
+        <div class="input-new">
+          <ion-icon name="bag-outline"></ion-icon>
+          <input type="text" placeholder="Enter your password" />
+          <ion-icon name="eye-off-outline"></ion-icon>
         </div>
         <div class="forget">
-          <a href="#" style="color: chocolate; font-size: small"
-            >Lupa password?</a
-          >
+          <a href="#" style="color: chocolate">Lupa password?</a>
         </div>
         <div class="login">
           <h4>Login</h4>

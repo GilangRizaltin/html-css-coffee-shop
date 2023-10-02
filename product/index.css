@@ -13,8 +13,6 @@ h1 {
     font-size: 2rem;
 }
 
-
-
 /*Header*/
 header {
     height: 80px;
@@ -64,13 +62,24 @@ header {
 .product-text {
     flex: 1;
 }
-
+.cart-symbol ion-icon, .search-symbol ion-icon {
+    font-size: 32px;
+    color: white;
+}
 /* Image Title */
 .image-title {
     height: 330px;
     margin-bottom: 30px;
 }
 
+.image-title img {
+    width: 100%;
+    height: 100%
+}
+
+.top {
+    display: none;
+}
 /* h1 {
     font-size: 260%;
 } */
@@ -84,11 +93,6 @@ header {
 }
 
 /* Promo */
-.text-title {
-    margin: 0px 60px 40px 60px;
-    display: flex;
-    position: relative;
-}
 
 .outer {
     /* display: flex;
@@ -109,21 +113,39 @@ header {
 .coupon {
     display: flex;
     background-color: rgb(151, 221, 167);
-    width: 260px;
+    width: 280px;
     height: 100px;
     border-radius: 22px;
+    padding: 10px 10px 0px 10px;
     margin-left: 20px;
 }
 
-.text-title img {
+.text-title p {
     position: absolute;
     right: 0;
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.text-title :last-child {
+    right: 70px;
 }
 
 .text-title img:hover {
     opacity: 0.8;
 }
+/*product page title*/
 
+.text-title {
+    margin: 40px 60px;
+    display: flex;
+    position: relative;
+}
 /* Product Page */
 .product-page {
     display: flex;
@@ -188,21 +210,22 @@ header {
     right: 0;
     display: grid;
     grid-template-columns: 300px 4% 300px;
-    grid-template-rows: 500px 10px 500px 10px 500px;
+    grid-template-rows: 500px 10px 500px 10px 500px 50px;
     justify-items: center;
     grid-template-areas: 
     "head . head2"
     ". . ."
     "three . four"
     ". . ."
-    "five . six";
+    "five . six"
+    "page page page";
+    margin-bottom: 20px;
 
 }
 
 .head {
     grid-area: head;
 }
-
 .head2 {
     grid-area: head2;
 }
@@ -218,11 +241,32 @@ header {
 .six {
     grid-area: six;
 }
+.page {
+    grid-area: page;
+}
 .show-product {
     height: 50px;
     width: 50px;
 }
-
+.page {
+    display: flex;
+}
+.page button {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: rgb(190, 190, 190);
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+}
+.page :last-child {
+    background-color: orange;
+}
 /*dbahbhdfbjkdsavbjkvdsajkvjkndvsjknsavkj*/
 
 
@@ -256,12 +300,22 @@ header {
     box-shadow: 2px 2px 5px #aaaaaa;
     padding: 12px;
 }
-
+.rating, .rating li,.rating ul {
+    color: white;
+    display: flex;
+    margin: 2px 10px 2px 0px;
+    align-items: center;
+}
+.fa ion-icon {
+    color: orange;
+}
 .Title, .desc, .idr {
     margin-bottom: 5px;
 }
-
-
+.idr {
+    display: flex;
+    align-items: center;
+}
 .harga {
     display: flex;
     height: 35px;
@@ -287,6 +341,10 @@ header {
     align-items: center;
     border-radius: 7px;
     cursor: pointer;
+}
+.cart1 ion-icon {
+    font-size: 24px;
+    color: orange;
 }
 /*footer*/
 footer {
@@ -351,21 +409,37 @@ footer p {
     .product-filter * {
         margin-bottom: 10px;
     }
+    .info {
+        height: 240px;
+    }
     .product-list {
         width: auto;
         position: relative;
         margin: 20px 5%;
         display: grid;
         grid-template-columns: 300px auto 300px;
-        grid-template-rows: 500px 10px 500px 10px 500px;
+        grid-template-rows: 530px 10px 530px 10px 530px 50px;
         justify-items: center;
         grid-template-areas: 
         "head . head2"
         ". . ."
         "three . four"
         ". . ."
-        "five . six";
-    
+        "five . six"
+        "page page page";
+    }
+    .idr {
+        display: block;
+    }
+    .harga {
+        display: block;
+    }
+    .price {
+        width: 100%;
+        height: 30px;
+    }
+    .cart1 {
+        margin-top: 5px;
     }
     
 }
@@ -385,11 +459,51 @@ footer p {
     .socmed div {
         margin-bottom: 20px;
     }
+    .image-title {
+        height: 210px;
+        margin-bottom: 30px;
+    }
+    .image-title h1 {
+        position: relative;
+        width: 400px;
+        top: -160px;
+        left: 40px;
+        color: white;
+    }
 }
 
-/*Tablet 768*/
+/*Tablet 677*/
 @media screen and (max-width :677px) {
+    .img img {
+        height: 180px;
+        width: 180px;
+    }
+    .info {
+        width: 170px;
+        bottom: 0;
+        left: 0;
+        position: relative;
+        background-color: white;
+        box-shadow: 0px 0px 0px ;
+        padding: 6px;
+    }
+    .product-list {
+        width: auto;
+        position: relative;
+        margin: 20px 5%;
+        display: grid;
+        grid-template-columns: 190px auto 190px;
+        grid-template-rows: 500px 10px 500px 10px 500px 50px;
+        justify-items: center;
+        grid-template-areas: 
+        "head . head2"
+        ". . ."
+        "three . four"
+        ". . ."
+        "five . six"
+        "page page page";
     
+    }
 }
 
 @media screen and (max-width :426px) {
@@ -397,7 +511,7 @@ footer p {
 }
 
 /*Mobile 425*/
-@media screen and (max-width :426px) {
+@media screen and (max-width :460px) {
     .coffee-shop-text, 
     .home-text, 
     .product-text, 
@@ -425,4 +539,47 @@ footer p {
         margin-top: 5px;
         display: flex;
     }
+    .image-title {
+        display: none;
+    }
+    .text-title {
+        margin: 20px 30px;
+        display: flex;
+        position: relative;
+    }
+    .top {
+        display: flex;
+        background-color: white;
+        width: auto;
+        height: 40px;
+        padding: 10px 2%;
+        border-bottom: 2px solid black;
+        position: sticky;
+        top: 80px;
+        z-index: 100;
+    }
+    .search {
+        display: flex;
+        width: 100%;
+    }
+    .search input {
+        height: 93%;
+        width: 70%;
+        padding: 0px 20px;
+        font-size: 1rem;
+        border-radius: 16px;
+    }
+    .search button {
+        height: 100%;
+        width: 28%;
+        margin-left: 2%;
+        border-radius: 16px;
+        font-size: 1rem;
+        background-color: orange;
+        border: 0px;
+    }
+    .product-filter {
+        display: none;
+    }
 }
+

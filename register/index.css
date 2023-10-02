@@ -33,16 +33,31 @@ body {
 
 h3 {
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-.input input {
+.input-new {
     width: 100%;
     height: 40px;
     background-color: rgb(224, 224, 224);
-    border: none;
-    outline: none;
     border: 1px solid rgb(190, 190, 190);
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-new input {
+    width: 90%;
+    height: 80%;
+    margin: 0px 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(224, 224, 224);
+    outline: none;
+}
+.input-new ion-icon {
+    font-size: 1rem;
+    margin: 0px 10px;
 }
 
 .register{
@@ -70,7 +85,7 @@ h3 {
 }
 
 .facebook, .google {
-    width: 40%;
+    width: 50%;
     height: 30px;
     background-color: rgb(245, 245, 245);
     border: 1px solid rgb(218, 218, 218);
@@ -86,10 +101,14 @@ h3 {
 .register:hover {
     opacity: 0.8;
 }
+
 .last {
     margin-bottom: 30px;
 }
 
+a {
+    text-decoration: none;
+}
 /*Laptop 1024*/
 @media screen and (max-width :1439px) {
     
@@ -110,7 +129,7 @@ h3 {
 }
 
 /*Mobile 425*/
-@media screen and (max-width :426px) {
+@media screen and (max-width :511px) {
     .picture {
         display: none;
     }

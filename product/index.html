@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/product/product.css" />
+    <link rel="stylesheet" href="/product/index.css" />
     <title>Product</title>
     <style>
-      /* The container */
       .container {
         display: block;
         position: relative;
@@ -19,7 +18,6 @@
         -ms-user-select: none;
         user-select: none;
       }
-      /* Hide the browser's default checkbox */
       .container input {
         position: absolute;
         opacity: 0;
@@ -27,7 +25,6 @@
         height: 0;
         width: 0;
       }
-      /* Create a custom checkbox */
       .checkmark {
         position: absolute;
         top: 0;
@@ -38,26 +35,21 @@
         background-color: black;
         border-radius: 5px;
       }
-      /* On mouse-over, add a grey background color */
       .container:hover input ~ .checkmark {
         background-color: #ccc;
       }
-      /* When the checkbox is checked, add a blue background */
       .container input:checked ~ .checkmark {
         background-color: orange;
         border: 1px solid orange;
       }
-      /* Create the checkmark/indicator (hidden when not checked) */
       .checkmark:after {
         content: "";
         position: absolute;
         display: none;
       }
-      /* Show the checkmark when checked */
       .container input:checked ~ .checkmark:after {
         display: block;
       }
-      /* Style the checkmark/indicator */
       .container .checkmark:after {
         left: 6px;
         top: 3px;
@@ -94,10 +86,10 @@
         <p style="color: white">Product</p>
       </div>
       <div class="search-symbol">
-        <img src="/Search.png" alt="Search" />
+        <ion-icon name="search-outline"></ion-icon>
       </div>
       <div class="cart-symbol">
-        <img src="/ShoppingCart (1).png" alt="cart1" />
+        <ion-icon name="cart-outline"></ion-icon>
       </div>
       <div class="sign-in">
         <p style="color: white">Sign In</p>
@@ -107,26 +99,29 @@
       </div>
     </header>
     <section class="image-title">
-      <img
-        src="/assets/img/Rectangle 299.png"
-        alt="image"
-        width="100%"
-        height="100%"
-      />
+      <img src="/assets/webp/Rectangle 299.webp" alt="image" />
       <h1>We Provide Good Coffee and Healthy Meals</h1>
     </section>
+    <div class="top">
+      <div class="search">
+        <input type="text" placeholder="Search Your Product" />
+        <button class="search-button">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
     <section class="promo">
       <div class="text-title">
         <h1>Today</h1>
         <h1 style="color: chocolate; margin-left: 10px">Promo</h1>
-        <img src="/assets/img/Group 1305.png" alt="left" />
-        <img src="/assets/img/Group 1304.png" alt="right" />
+        <p><ion-icon name="arrow-forward-outline"></ion-icon></p>
+        <p><ion-icon name="arrow-back-outline"></ion-icon></p>
       </div>
       <div class="outer">
         <div class="inner">
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -136,7 +131,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -146,7 +141,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -156,7 +151,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -166,7 +161,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -176,7 +171,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -186,7 +181,7 @@
           </div>
           <div class="coupon">
             <div class="image-coupon">
-              <img src="/assets/img/image 47.png" alt="image-coupon" />
+              <img src="/assets/webp/image 47.webp" alt="image-coupon" />
             </div>
             <div class="info-coupon">
               <p>HAPPY MOTHERS DAY!</p>
@@ -261,12 +256,12 @@
       <div class="product-list">
         <div class="head">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 30.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -274,27 +269,58 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="head2">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 31.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -302,27 +328,58 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="three">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 30.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -330,27 +387,58 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="four">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 31.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -358,27 +446,58 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="five">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 30.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -386,27 +505,58 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
         </div>
         <div class="six">
           <div class="img">
-            <img src="/image 27.png" alt="product_photo" />
+            <img src="/assets/webp/image 31.webp" alt="product_photo" />
             <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h2>Hazelnut latte</h2>
+              <h3>Hazelnut latte</h3>
             </div>
             <div class="desc">
               <p>
@@ -414,18 +564,56 @@
                 own taste and make your day better.
               </p>
             </div>
+            <div class="rating">
+              <ul>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star checked"
+                    ><ion-icon name="star"></ion-icon
+                  ></i>
+                </li>
+                <li>
+                  <i class="fa fa-star"><ion-icon name="star"></ion-icon></i>
+                </li>
+              </ul>
+              <p style="color: black"><strong>5.0</strong></p>
+            </div>
             <div class="idr">
-              <h3>IDR 20.000</h3>
+              <h5 style="color: red; margin-right: 5px">
+                <del>IDR 20.000</del>
+              </h5>
+              <h3>IDR 10.000</h3>
             </div>
             <div class="harga">
               <div class="price">
                 <p>Buy</p>
               </div>
               <div class="cart1">
-                <img src="/ShoppingCart.png" alt="cart" />
+                <ion-icon name="cart-outline"></ion-icon>
               </div>
             </div>
           </div>
+        </div>
+        <div class="page">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button><ion-icon name="arrow-forward-outline"></ion-icon></button>
         </div>
       </div>
     </section>
@@ -458,7 +646,7 @@
         <p>Privacy Policy</p>
         <p>Terms of Service</p>
       </div>
-      <div class="contact sosmed">
+      <div class="contact">
         <h4>Social Media</h4>
         <div class="socmed">
           <div>

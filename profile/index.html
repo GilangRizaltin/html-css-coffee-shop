@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/profile/profile.css" />
+    <meta name="description" content="Profile landing page" />
+    <link rel="stylesheet" href="/profile/index.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Profile</title>
   </head>
   <body>
     <header>
       <div class="coffee-shop-logo">
-        <img src="/assets/webp/Frame.webp" alt="logo" />
+        <img
+          src="/assets/webp/Frame.webp"
+          alt="logo"
+          style="height: 32px; width: 32px"
+        />
       </div>
       <div class="coffee-shop-text">
         <p style="color: white">Coffee Shop</p>
@@ -22,10 +35,10 @@
         <p style="color: white">Product</p>
       </div>
       <div class="search-symbol">
-        <img src="/Search.png" alt="Search" />
+        <ion-icon name="search-outline"></ion-icon>
       </div>
       <div class="cart-symbol">
-        <img src="/ShoppingCart (1).png" alt="cart1" />
+        <ion-icon name="cart-outline"></ion-icon>
       </div>
       <div class="sign-in">
         <p style="color: white">Sign In</p>
@@ -41,11 +54,7 @@
           <h3>Gilang Rizaltin</h3>
           <p style="color: silver">gilangzaltin@gmail.com</p>
           <div class="image">
-            <img
-              src="/assets/img/Rectangle 289 (1).png"
-              alt=""
-              style="width: 100%; height: 100%"
-            />
+            <img src="/assets/webp/image 22.webp" alt="photo-profile" />
           </div>
           <div class="upload" style="margin-bottom: 5px">
             <p>Upload New Photo</p>
@@ -55,38 +64,33 @@
       </div>
       <div class="identity">
         <h3>Full Name</h3>
-        <input
-          type="text"
-          placeholder="   Search Your Product"
-          style="font-size: 18px"
-        />
+        <div class="input-new">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" placeholder="Enter your fullname" />
+        </div>
         <h3>Email</h3>
-        <input
-          type="text"
-          placeholder="   Search Your Product"
-          style="font-size: 18px"
-        />
+        <div class="input-new">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" placeholder="Enter your E-Mail" />
+        </div>
         <h3>Phone</h3>
-        <input
-          type="text"
-          placeholder="   Search Your Product"
-          style="font-size: 18px"
-        />
+        <div class="input-new">
+          <ion-icon name="call-outline"></ion-icon>
+          <input type="number" placeholder="Enter your phone number" />
+        </div>
         <div class="set-password">
           <h3>Password</h3>
           <a href="#" style="color: chocolate">Set New Password</a>
         </div>
-        <input
-          type="text"
-          placeholder="   Search Your Product"
-          style="font-size: 18px"
-        />
+        <div class="input-new">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" placeholder="Enter your password" />
+        </div>
         <h3>Address</h3>
-        <input
-          type="text"
-          placeholder="   Search Your Product"
-          style="font-size: 18px"
-        />
+        <div class="input-new">
+          <ion-icon name="location-outline"></ion-icon>
+          <input type="text" placeholder="Enter your address" />
+        </div>
         <div class="submit">
           <p>Submit</p>
         </div>
@@ -95,7 +99,11 @@
     <footer>
       <div class="contact first">
         <div class="emblem">
-          <img src="/assets/webp/logo brown.webp" alt="logo" />
+          <img
+            src="/assets/webp/logo brown.webp"
+            alt="logo"
+            style="height: 32px; width: 32px"
+          />
           <p style="color: rgb(128, 74, 36); margin-left: 10px">Coffee Shop</p>
         </div>
         <p>
@@ -121,12 +129,18 @@
         <p>Privacy Policy</p>
         <p>Terms of Service</p>
       </div>
-      <div class="contact sosmed">
+      <div class="contact">
         <h4>Social Media</h4>
         <div class="socmed">
-          <img src="" alt="Facebook" />
-          <img src="" alt="Twiter" />
-          <img src="" alt="Instagaram" />
+          <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </div>
         </div>
       </div>
     </footer>
