@@ -9,6 +9,12 @@ body {
     max-width: 100vw;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+
+
 /*Header*/
 header {
     height: 80px;
@@ -87,7 +93,7 @@ header {
 .outer {
     /* display: flex;
     margin-bottom: 30px; */
-    overflow: hidden;
+    overflow: scroll;
     width: 100%;
 }
 
@@ -126,7 +132,7 @@ header {
 }
 
 .product-filter {
-    width: 20%;
+    width: 240px;
     height: 45%;
     background-color: black;
     border-radius: 24px;
@@ -140,23 +146,25 @@ header {
     position: relative;
 }
 
-.filter h4 {
+.filter h3 {
     position: absolute;
     right: 0;
 }
 
 .input input {
-    width: 100%;
+    width: 90%;
     height: 40px;
     background-color: rgb(224, 224, 224);
     border: none;
     outline: none;
     border: 1px solid rgb(190, 190, 190);
     border-radius: 15px;
+    padding-left : 20px;
+    font-size: 1rem;
 }
 
 .product-filter * {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .apply {
@@ -170,21 +178,24 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0px;
 }
 
 .product-list {
+    width: 700px;
     position: relative;
+    margin-left: 3%;
     right: 0;
     display: grid;
-    grid-template-columns: 7% 300px 7% 300px;
-    grid-template-rows: 570px 30px 570px 30px 570px;
+    grid-template-columns: 300px 4% 300px;
+    grid-template-rows: 500px 10px 500px 10px 500px;
     justify-items: center;
     grid-template-areas: 
-    ". head . head2"
-    ". . . ."
-    ". three . four"
-    ". . . ."
-    ". five . six";
+    "head . head2"
+    ". . ."
+    "three . four"
+    ". . ."
+    "five . six";
 
 }
 
@@ -215,7 +226,27 @@ header {
 /*dbahbhdfbjkdsavbjkvdsajkvjkndvsjknsavkj*/
 
 
-
+/*product*/
+.img {
+    position: relative;
+}
+.img p {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: red;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+}
+.img img {
+    height: 330px;
+    width: 300px;
+}
 .info {
     width: 250px;
     bottom: 70px;
@@ -233,7 +264,7 @@ header {
 
 .harga {
     display: flex;
-    height: 60px;
+    height: 35px;
 }
 
 .price {
@@ -257,40 +288,141 @@ header {
     border-radius: 7px;
     cursor: pointer;
 }
-
+/*footer*/
 footer {
     background-color: #aaaa;
-    padding: 60px 200px;
+    padding: 5% 10%;
     font-family: Arial, sans-serif;
     display: flex;
-  }
-  
-.contact {
-    margin-left: 40px;
-    margin-right: 40px;
 }
-
+footer p {
+    color: rgb(82, 82, 82);
+}
+.contact {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 .emblem {
     display: flex;
     align-items: center;
 }
-
 .socmed img:hover {
     opacity: 0.8;
 }
-
 footer p {
     margin-top: 30px;
 }
-
 .socmed {
     margin-top: 30px;
 }
-
 .emblem p {
     margin: 0;
 }
-
 .socmed {
-    align-items: start;
+    display: flex;
+}
+.socmed div {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px
+}
+.socmed ion-icon {
+    width: 40px;
+}
+/*Laptop 1024*/
+@media screen and (max-width :1439px) {
+
+}
+
+@media screen and (max-width :1023px) {
+    .product-page {
+        display: block;
+        justify-items: center;
+    }
+    .product-filter {
+        margin: 0 5%;
+        width: auto;
+    }
+    .product-filter * {
+        margin-bottom: 10px;
+    }
+    .product-list {
+        width: auto;
+        position: relative;
+        margin: 20px 5%;
+        display: grid;
+        grid-template-columns: 300px auto 300px;
+        grid-template-rows: 500px 10px 500px 10px 500px;
+        justify-items: center;
+        grid-template-areas: 
+        "head . head2"
+        ". . ."
+        "three . four"
+        ". . ."
+        "five . six";
+    
+    }
+    
+}
+
+/*Tablet 768*/
+@media screen and (max-width :768px) {
+    .coffee-shop-text {
+        display: none;
+    }
+    .contact {
+        margin-left: 0.8%;
+        margin-right: 0.8%;
+    }
+    .socmed {
+        display: block;
+    }
+    .socmed div {
+        margin-bottom: 20px;
+    }
+}
+
+/*Tablet 768*/
+@media screen and (max-width :677px) {
+    
+}
+
+@media screen and (max-width :426px) {
+    
+}
+
+/*Mobile 425*/
+@media screen and (max-width :426px) {
+    .coffee-shop-text, 
+    .home-text, 
+    .product-text, 
+    .search-symbol, 
+    .cart-symbol, 
+    .sign-in, .sign-up {
+    margin-left: 6px;
+    }
+    .coffee-shop-logo {
+        margin-left: 1%;
+    }
+    .sign-up {
+        margin-right: 1%;
+    }
+    footer {
+        display: block;
+    }
+    .contact {
+        margin-bottom: 20px;
+    }
+    footer p {
+        margin-top: 5px;
+    }
+    .socmed {
+        margin-top: 5px;
+        display: flex;
+    }
 }

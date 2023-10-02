@@ -19,7 +19,6 @@
         -ms-user-select: none;
         user-select: none;
       }
-
       /* Hide the browser's default checkbox */
       .container input {
         position: absolute;
@@ -28,7 +27,6 @@
         height: 0;
         width: 0;
       }
-
       /* Create a custom checkbox */
       .checkmark {
         position: absolute;
@@ -40,30 +38,25 @@
         background-color: black;
         border-radius: 5px;
       }
-
       /* On mouse-over, add a grey background color */
       .container:hover input ~ .checkmark {
         background-color: #ccc;
       }
-
       /* When the checkbox is checked, add a blue background */
       .container input:checked ~ .checkmark {
         background-color: orange;
         border: 1px solid orange;
       }
-
       /* Create the checkmark/indicator (hidden when not checked) */
       .checkmark:after {
         content: "";
         position: absolute;
         display: none;
       }
-
       /* Show the checkmark when checked */
       .container input:checked ~ .checkmark:after {
         display: block;
       }
-
       /* Style the checkmark/indicator */
       .container .checkmark:after {
         left: 6px;
@@ -77,6 +70,14 @@
         transform: rotate(45deg);
       }
     </style>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -114,7 +115,7 @@
       />
       <h1>We Provide Good Coffee and Healthy Meals</h1>
     </section>
-    <!-- <section class="promo">
+    <section class="promo">
       <div class="text-title">
         <h1>Today</h1>
         <h1 style="color: chocolate; margin-left: 10px">Promo</h1>
@@ -195,7 +196,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <div class="text-title">
       <h1>Our</h1>
       <h1 style="color: chocolate; margin-left: 10px">Product</h1>
@@ -203,14 +204,14 @@
     <section class="product-page">
       <div class="product-filter">
         <div class="filter">
-          <h5>Filter</h5>
-          <h6 style="cursor: pointer">Reset Filter</h6>
+          <h2>Filter</h2>
+          <h3 style="cursor: pointer">Reset Filter</h3>
         </div>
-        <h6>Search</h6>
+        <h3>Search</h3>
         <div class="input">
-          <input type="text" placeholder="   Search Your Product" />
+          <input type="text" placeholder="Search Your Product" />
         </div>
-        <h6>Category</h6>
+        <h3>Category</h3>
         <label class="container"
           >Favorite Product
           <input type="checkbox" checked="checked" />
@@ -231,7 +232,7 @@
           <input type="checkbox" />
           <span class="checkmark"></span>
         </label>
-        <h6>Sort By</h6>
+        <h3>Sort By</h3>
         <label class="container"
           >Buy 1 Get 1
           <input type="checkbox" checked="checked" />
@@ -254,21 +255,18 @@
         </label>
         <h4>Range Price</h4>
         <div class="apply">
-          <p style="color: black">Apply Filter</p>
+          <p style="color: black; margin: 0">Apply Filter</p>
         </div>
       </div>
       <div class="product-list">
         <div class="head">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -291,15 +289,12 @@
         </div>
         <div class="head2">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -322,15 +317,12 @@
         </div>
         <div class="three">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -353,15 +345,12 @@
         </div>
         <div class="four">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -384,15 +373,12 @@
         </div>
         <div class="five">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -415,15 +401,12 @@
         </div>
         <div class="six">
           <div class="img">
-            <img
-              src="/image 27.png"
-              alt="product_photo"
-              style="height: 330px; width: 300px"
-            />
+            <img src="/image 27.png" alt="product_photo" />
+            <p>FLASH SALE!</p>
           </div>
           <div class="info">
             <div class="Title">
-              <h1>Hazelnut latte</h1>
+              <h2>Hazelnut latte</h2>
             </div>
             <div class="desc">
               <p>
@@ -450,7 +433,7 @@
       <div class="contact first">
         <div class="emblem">
           <img src="/assets/webp/logo brown.webp" alt="logo" />
-          <p>Coffee Shop</p>
+          <p style="color: rgb(128, 74, 36); margin-left: 10px">Coffee Shop</p>
         </div>
         <p>
           Coffee Shop is a store that sells some good <br />
@@ -478,9 +461,15 @@
       <div class="contact sosmed">
         <h4>Social Media</h4>
         <div class="socmed">
-          <img src="/assets/img/Facebook.png" alt="Facebook" />
-          <img src="/assets/img/Twitter.png" alt="Twiter" />
-          <img src="/assets/img/Instagram.png" alt="Instagaram" />
+          <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="logo-twitter"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </div>
         </div>
       </div>
     </footer>
