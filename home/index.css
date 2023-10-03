@@ -106,6 +106,20 @@ header {
 .amount-info .center, .amount-info .right {
     margin-left: 20px;
 }
+/*Chat*/
+.chat {
+    height: 60px;
+    width: 60px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10vh;
+    right: 60px;
+    z-index: 100;
+}
 /*page two*/
 .page-two {
     height: 70vh;
@@ -177,11 +191,17 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.page-four h1, .page-four p {
+.page-four h1, .page-four p, .page-four hr {
     text-align: center;
+    margin-bottom: 40px;
 }
 .page-four img {
     width: 100%;
+}
+.page-four hr {
+    position: relative;
+    left: 50%;
+    margin-bottom: 40px;
 }
 /*product*/
 .info {
