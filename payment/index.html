@@ -184,17 +184,19 @@
             class="hidden absolute bg-gray-100 min-w-[160px] right-0 top-14 overflow-auto z-10"
           >
             <a
-              href="http://127.0.0.1:5500/history/"
+              href="https://coffeeshop-gilang.netlify.app/history/#"
               class="text-black px-3 py-4 block hover:bg-gray-300"
               >History</a
             >
             <a
-              href="http://127.0.0.1:5500/profile/"
+              href="https://coffeeshop-gilang.netlify.app/profile/#"
               class="text-black px-3 py-4 block hover:bg-gray-300"
               >Profile</a
             >
-            <a href="#" class="text-black px-3 py-4 block hover:bg-gray-300"
-              >Log Out</a
+            <a
+              href="#"
+              class="text-black px-3 py-4 block hover:bg-gray-300 open-modal-btn"
+              >log Out</a
             >
           </div>
         </div>
@@ -257,15 +259,41 @@
               class="text-black px-3 py-4 block hover:bg-gray-300"
               >Profile</a
             >
-            <a href="#" class="text-black px-3 py-4 block hover:bg-gray-300"
-              >Log Out</a
+            <a
+              href="#"
+              class="text-black px-3 py-4 block hover:bg-gray-300 open-modal-btn"
+              >log Out</a
             >
           </div>
         </div>
       </section>
+      <div
+        class="hidden fixed inset-0 flex items-center justify-center z-50 outline-none modal w-full h-full bg-order"
+        id="myModals"
+      >
+        <div
+          class="flex flex-col gap-7 modal-content bg-white p-8 rounded shadow-lg w-[300px] justify-center"
+        >
+          <p class="text-black">Are you sure for Log Out?</p>
+          <div class="flex justify-end items-center gap-4 text-black">
+            <button
+              class="flex-1 hover:border-primary text-base border-2 border-solid border-order rounded-xl"
+              id="closeModalBtn"
+            >
+              Cancel
+            </button>
+            <button
+              class="flex-1 hover:border-primary text-base border-2 border-solid border-order rounded-xl"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
       <script>
+        // Dropdown
         function myFunction() {
-          var dropdown = document.getElementById("myDropdown");
+          const dropdown = document.getElementById("myDropdown");
           if (dropdown.classList.contains("hidden")) {
             dropdown.classList.remove("hidden");
           } else {
@@ -273,25 +301,48 @@
           }
         }
         function hbgFunction() {
-          var dropdown = document.getElementById("Dropdownhamburger");
+          const dropdown = document.getElementById("Dropdownhamburger");
           if (dropdown.classList.contains("hidden")) {
             dropdown.classList.remove("hidden");
           } else {
             dropdown.classList.add("hidden");
           }
         }
-        window.onclick = function (event) {
-          if (!event.target.matches("#dropbtn")) {
-            var dropdowns = document.getElementsByClassName("hidden");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (!event.target.matches("#Dropdownhamburger")) {
-                openDropdown.classList.add("hidden");
-              }
-            }
+        // function closeDropdown() {
+        //   const dropdown = document.getElementById("myDropdown");
+        //   const dropdownHamburger =
+        //     document.getElementById("Dropdownhamburger");
+        //   if (dropdown && !dropdown.classList.contains("hidden")) {
+        //     dropdown.classList.add("hidden");
+        //   }
+        //   if (
+        //     dropdownHamburger &&
+        //     !dropdownHamburger.classList.contains("hidden")
+        //   ) {
+        //     dropdownHamburger.classList.add("hidden");
+        //   }
+        // }
+
+        // window.onclick = function (event) {
+        //   closeDropdown();
+        // };
+        // Modal
+        const logmodal = document.getElementById("myModals");
+        const openModalBtns = document.querySelectorAll(".open-modal-btn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        function toggleModals() {
+          logmodal.classList.toggle("hidden");
+        }
+        function toggleList() {}
+        openModalBtns.forEach(function (btn) {
+          btn.addEventListener("click", toggleModals);
+        });
+        closeModalBtn.addEventListener("click", toggleModals);
+        window.addEventListener("click", function (event) {
+          if (event.target === logmodal) {
+            toggleModals();
           }
-        };
+        });
       </script>
     </header>
     <main class="pl-5 pr-5 md:pl-10 md:pr-10 desk:pl-def desk:pr-def">
@@ -637,16 +688,16 @@
               >
                 Checkout
               </button>
-              <!-- modal -->
+
               <div
                 id="myModal"
-                class="hidden fixed z-10 pt-48 pl-5 pr-5 left-0 top-0 w-full h-full overflow-auto bg-order"
+                class="hidden fixed inset-0 flex z-50 outline-none modal w-full h-full bg-order items-center justify-center"
               >
                 <div
-                  class="modal-content bg-white mx-auto p-2 border border-gray-800 w-full sm:w-[385px] flex flex-col items-center"
+                  class="flex flex-col gap-7 modal-content bg-white p-8 rounded shadow-lg w-[300px]"
                 >
-                  <p>Confirm Checkout?</p>
-                  <div>
+                  <p class="flex justify-center">Confirm Checkout?</p>
+                  <div class="flex justify-center">
                     <button
                       id="close"
                       class="border-2 border-solid border-order py-1 px-2.5 rounded-xl hover:border-primary"
@@ -655,7 +706,7 @@
                       Cancel
                     </button>
                     <button
-                      id=""
+                      id="confirm"
                       class="border-2 border-solid border-order py-1 px-2.5 rounded-xl hover:border-primary"
                       aria-label="confirm checkout"
                     >
@@ -1133,26 +1184,19 @@
     </footer>
   </body>
   <script>
-    // Get the modal
     var modal = document.getElementById("myModal");
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("close");
-    // When the user clicks the button, open the modal
-    btn.onclick = function () {
-      modal.style.display = "block";
-    };
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    };
-    // When the user clicks anywhere outside of the modal, close it
-    var dropdown = document.getElementById("myDropdown");
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    var btns = document.getElementById("myBtn");
+    var closeBtn = document.getElementById("close");
+    var confirmBtn = document.getElementById("confirm");
+    function toggleModal() {
+      modal.classList.toggle("hidden");
+    }
+    btns.addEventListener("click", toggleModal);
+    closeBtn.addEventListener("click", toggleModal);
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        toggleModal();
       }
-    };
+    });
   </script>
 </html>
